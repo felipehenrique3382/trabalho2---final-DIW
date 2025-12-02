@@ -1,0 +1,64 @@
+/* Apenas dentro do container de planos */
+#lista-planos {
+  margin-top: 1rem;
+}
+
+/* Cada card dentro de #lista-planos */
+#lista-planos .card {
+  border-radius: 15px;           
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efeito hover só nos cards de #lista-planos */
+#lista-planos .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Card premium */
+#lista-planos .card.border-primary {
+  border-width: 2px;
+}
+
+/* Título dentro de #lista-planos */
+#lista-planos .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Benefícios listados dentro de #lista-planos */
+#lista-planos .list-group-item {
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Botões dentro de #lista-planos */
+#lista-planos .btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+}
+
+/* Espaçamento entre colunas somente dentro de #lista-planos */
+#lista-planos > .col-md-5 {
+  margin-bottom: 1.5rem;
+}
+
+/* Botão Novo Plano */
+#btnNovoPlano {
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Responsividade apenas para #lista-planos */
+@media (max-width: 768px) {
+  #lista-planos > .col-md-5 {
+    margin-bottom: 2rem;
+  }
+
+  #btnNovoPlano {
+    width: 100%;
+  }
+}

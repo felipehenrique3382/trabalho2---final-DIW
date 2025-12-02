@@ -1,0 +1,158 @@
+/* =========================
+   Variáveis de cores
+   ========================= */
+:root {
+  --primary-color: #034AA6;   /* Azul principal */
+  --secondary-color: #A68053; /* Marrom secundário */
+  --dark-color: #333140;      /* Fundo escuro */
+  --light-color: #DFE7F2;     /* Fundo claro */
+  --tertiary-color: #A67C6D;  /* Detalhes / bordas */
+  --white-color: #ffffff;
+}
+
+/* =========================
+   Background com imagens rotativas
+   ========================= */
+body {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* background full screen */
+#bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* atrás do conteúdo */
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+
+/* Container do card de login */
+.login-card {
+  max-width: 400px;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffffe6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+.login-card img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Botões */
+.btn-primary, .btn-danger {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
+}
+
+.btn-primary:hover, .btn-danger:hover {
+  background-color: #023a88 !important;
+  border-color: #023a88 !important;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  color: var(--white-color) !important;
+}
+
+.btn-secondary:hover {
+  background-color: #8c6745 !important;
+  border-color: #8c6745 !important;
+}
+
+/* Inputs */
+.form-control {
+  border: 1px solid var(--tertiary-color);
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(3, 74, 166, 0.25);
+}
+
+/* Modal cadastro */
+.modal-content {
+  background-color: #ffffffe6;
+  color: var(--white-color);
+  border: 1px solid var(--tertiary-color);
+}
+
+.modal-header, .modal-footer {
+  border-color: var(--tertiary-color);
+}
+
+.modal-footer .btn-light {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.modal-footer .btn-light:hover {
+  background-color: #8c6745;
+  border-color: #8c6745;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #023a88;
+}
+
+/* =============================
+   Botões Login e Cadastrar
+   ============================= */
+.login-card form .btn, 
+.login-card form a {
+    display: block;            /* empilhados verticalmente */
+    width: 100%;               /* mesma largura dos inputs */
+    max-width: 400px;          /* evita que fiquem gigantes */
+    margin: 0 auto 10px auto;  /* centraliza e adiciona espaço */
+    padding: 0.5rem 0;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+/* Botão ENTRAR - cor primária */
+.login-card form .btn {
+    background-color: #034AA6; /* azul primário */
+    border-color: #034AA6;
+    color: #DFE7F2;
+}
+
+.login-card form .btn:hover {
+    background-color: #023a88; /* azul mais escuro */
+    border-color: #023a88;
+}
+
+/* Link CADASTRAR - cor secundária */
+.login-card form a {
+    background-color: #A68053; /* cor secundária */
+    color: #DFE7F2;
+    text-decoration: none;
+}
+
+.login-card form a:hover {
+    background-color: #966D60; /* hover da cor secundária */
+    color: #DFE7F2;
+}

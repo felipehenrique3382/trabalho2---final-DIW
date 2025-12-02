@@ -1,0 +1,211 @@
+
+:root {
+  --bs-dark: #333140;      /* Navbar, textos escuros */
+  --bs-primary: #033f95;   /* Botões primários, links ativos */
+  --bs-secondary: #A68053; /* Botões secundários, badges */
+  --bs-light: #DFE7F2;     /* Background geral */
+  --bs-white: #ffffff;
+  --bs-tertiary: #A67C6D;  /* Bordas, alertas leves, textos secundários */
+}
+
+
+   /* Navbar */
+  
+.navbar {
+  background-color: var(--bs-dark) !important;
+}
+
+.navbar .nav-link {
+  color: var(--bs-light) !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: var(--bs-primary) !important;
+}
+
+.navbar .navbar-brand {
+  color: var(--bs-light) !important;
+  font-weight: 700;
+}
+
+/* =============================
+   Botões
+   ============================= */
+.btnColor {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+.btnColor:hover {
+  background-color: #023a88; /* azul mais escuro */
+  border-color: #023a88;
+  color: #fff;
+}
+
+.btnSecondary {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: #fff;
+}
+
+.btnSecondary:hover {
+  background-color: #8c6745; /* escurecer levemente */
+  border-color: #8c6745;
+  color: #fff;
+}
+
+/* =============================
+   Background geral
+   ============================= */
+body {
+    background-color: #DFE7F2;
+    color: #333140;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: #034AA6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #034AA6;
+    text-decoration: underline;
+}
+.span {
+    background-color: #033F95;
+}
+h2,h3,h5{
+    color: #033F95 ;
+}
+/* ------------------ NAVBAR ------------------ */
+.navbar {
+    background-color: #333140 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #DFE7F2 !important;
+}
+
+.navbar .nav-link:hover {
+    color: #034AA6 !important;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+    background-color: #333140;
+    color: #DFE7F2;
+}
+
+footer a {
+    color: #DFE7F2;
+}
+
+footer a:hover {
+    color: #034AA6;
+}
+footer h5{
+    color: #fff;
+}
+/* ------------------ BOTÕES ------------------ */
+.btn-primary {
+    background-color: #034AA6;
+    border-color: #034AA6;
+    color: #DFE7F2;
+}
+
+.btn-primary:hover {
+    background-color: #033F95;
+    border-color: #033F95;
+}
+
+.btn-secondary {
+    background-color: #A67C6D;
+    border-color: #A67C6D;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #966D60;
+    border-color: #966D60;
+    color: #DFE7F2;
+}
+
+/* ------------------ CARDS E SEÇÕES ------------------ */
+.card {
+    border: 1px solid #A68053;
+    color: #333140;
+}
+
+.card-title {
+    color: #034AA6;
+}
+
+.card-subtitle {
+    color: #A68053;
+}
+
+/* ------------------ FORMULÁRIOS ------------------ */
+.form-control {
+    border: 1px solid #A68053;
+    background-color: #fff;
+    color: #333140;
+}
+
+.form-control:focus {
+    border-color: #034AA6;
+    box-shadow: 0 0 0 0.2rem rgba(3, 74, 166, 0.25);
+}
+
+/* ------------------ BADGES ------------------ */
+.badge-primary {
+    background-color: #034AA6;
+}
+
+.badge-secondary {
+    background-color: #A68053;
+}
+
+/* ------------------ ALERTAS ------------------ */
+.alert-success {
+    background-color: #A68053;
+    color: #DFE7F2;
+    border-color: #966D60;
+}
+
+.alert-primary {
+    background-color: #034AA6;
+    color: #DFE7F2;
+    border-color: #033F95;
+}
+
+/* ------------------ OUTROS ------------------ */
+.sticky-top {
+    top: 20px;
+}
+
+.text-muted {
+    color: #A67C6D !important;
+}
+
+/* Navbar container já é flex, vamos usar flex-grow para centralizar */
+#menu-links {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* links centrais centralizados */
+    position: relative;
+}
+
+/* Login permanece à direita */
+#menu-links li:last-child {
+    position: absolute;
+    right: 0;
+}
+
+/* Espaçamento entre os links centrais */
+#menu-links li:not(:last-child) {
+    margin: 0 1rem;
+}

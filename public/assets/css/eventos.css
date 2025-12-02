@@ -1,0 +1,23 @@
+.form-container {
+  max-width: 900px; /* aproveita tela grande */
+  margin: 0 auto;
+  padding: 30px 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+}
+
+.form-container h1 {
+  font-weight: 700;
+  color: #333;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.btn-lg {
+  font-size: 18px;
+  font-weight: 600;
+}

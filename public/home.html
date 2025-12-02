@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home • Pontour</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="icon" href="./assets/img/logo.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="./assets/css/home.css">
+  <link rel="stylesheet" href="./assets/css/global.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-5">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="home.html">
+        <img src="./assets/img/logo.svg" alt="Pontour" width="40" height="40" class="me-2">
+        <span class="fw-bold text-light">Pontour</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto" id="menu-links">
+          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="parceiros.html">Parcerias</a></li>
+          <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="promo.html">Promoções</a></li>
+          <li class="nav-item"><a class="nav-link active me-4 text-white" href="login.html">Login/Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- FILTROS -->
+    <div class="row mb-4 p-3 bg-light rounded border">
+      <div class="col-md-8 mb-2 mb-md-0">
+        <input type="search" id="busca" class="form-control form-control-lg" placeholder="Pesquisar por nome, cidade ou estado...">
+      </div>
+      <div class="col-md-4">
+        <select id="filtroTipo" class="form-select form-select-lg">
+          <option value="">Filtrar por Tipo (Todos)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- GRID PONTOS -->
+      <div class="col-md-8">
+        <main id="grid-pontos" class="row g-4"></main>
+      </div>
+
+      <!-- FORMULARIO CADASTRO -->
+      <div class="col-md-4">
+        <aside class="bg-light p-3 rounded border sticky-top" style="top: 20px;">
+          <h3 class="h5 mb-3" id="tituloFormulario">➕ Cadastrar Novo Ponto</h3>
+          <div id="mensagens" class="position-fixed top-0 start-50 translate-middle-x mt-3" style="z-index: 2000; width: 90%; max-width: 500px;"></div>
+
+          <form id="form-cadastro">
+            <div class="mb-2">
+              <label for="nomePonto" class="form-label">Nome:</label>
+              <input type="text" class="form-control" id="nomePonto" required>
+            </div>
+
+            <div class="mb-2">
+              <label for="localPonto" class="form-label">Local (Endereço):</label>
+              <input type="text" class="form-control" id="localPonto">
+            </div>
+
+            <div class="row mb-2">
+              <div class="col">
+                <label for="cidadePonto" class="form-label">Cidade:</label>
+                <input type="text" class="form-control" id="cidadePonto" required>
+              </div>
+              <div class="col">
+                <label for="estadoPonto" class="form-label">Estado (UF):</label>
+                <input type="text" class="form-control" id="estadoPonto" maxlength="2" required>
+              </div>
+            </div>
+
+            <div class="row mb-2">
+              <div class="col">
+                <label for="latPonto" class="form-label">Latitude:</label>
+                <input type="number" step="any" class="form-control" id="latPonto">
+              </div>
+              <div class="col">
+                <label for="lngPonto" class="form-label">Longitude:</label>
+                <input type="number" step="any" class="form-control" id="lngPonto">
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label for="tipoPonto" class="form-label">Tipo:</label>
+              <input type="text" class="form-control" id="tipoPonto" placeholder="Ex: Museu, Parque">
+            </div>
+
+            <div class="row mb-2">
+              <div class="col">
+                <label for="horarioPonto" class="form-label">Horário:</label>
+                <input type="text" class="form-control" id="horarioPonto">
+              </div>
+              <div class="col">
+                <label for="precoPonto" class="form-label">Preço:</label>
+                <input type="text" class="form-control" id="precoPonto" placeholder="R$ 0,00">
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label for="dicasPonto" class="form-label">Dicas:</label>
+              <textarea class="form-control" id="dicasPonto" rows="2"></textarea>
+            </div>
+
+            <div class="mb-2">
+              <label for="imgPonto" class="form-label">URL da Imagem:</label>
+              <input type="url" class="form-control" id="imgPonto">
+            </div>
+
+            <div class="mb-3">
+              <label for="descPonto" class="form-label">Descrição:</label>
+              <textarea class="form-control" id="descPonto" rows="3" required></textarea>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btnColor fw-bold" id="btnSalvar">
+                ➕ Adicionar Ponto
+              </button>
+              <button type="button" id="btnCancelar" class="btn btnSecondary fw-bold d-none">
+                Cancelar
+              </button>
+            </div>
+          </form>
+        </aside>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white mt-5 py-4">
+    <div class="container">
+      <div class="row text-center text-md-start">
+
+        <!-- SOBRE -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Pontour</h5>
+          <p>Seu guia inteligente para explorar destinos, planejar roteiros e viver experiências inesquecíveis.</p>
+        </div>
+
+        <!-- LINKS RÁPIDOS -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Links Rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="home.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="planos.html" class="text-white text-decoration-none">Planos</a></li>
+            <li><a href="parceiros.html" class="text-white text-decoration-none">Parcerias</a></li>
+            <li><a href="eventos.html" class="text-white text-decoration-none">Eventos</a></li>
+            <li><a href="promo.html" class="text-white text-decoration-none">Promoções</a></li>
+          </ul>
+        </div>
+
+        <!-- REDES SOCIAIS -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Siga-nos</h5>
+          <div class="d-flex justify-content-center justify-content-md-start gap-3">
+            <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+          </div>
+         <p class="mt-3 mb-0">© 2025 Pontour. Todos os direitos reservados.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/scripts/home.js"></script>
+  <script src="./assets/scripts/usuarioLogado.js"></script>
+</body>
+
+</html>
